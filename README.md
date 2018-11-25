@@ -1,3 +1,6 @@
+## CSGO practice server
+forked from https://github.com/kaimallea/csgo and added https://github.com/splewis/csgo-practice-mode.
+
 # CSGO
 
 The Dockerfile will build an image for running a Counter-Strike: Global Offensive dedicated server in a container.
@@ -5,7 +8,7 @@ The Dockerfile will build an image for running a Counter-Strike: Global Offensiv
 ### Build image
 
 ```bash
-docker build -t csgo-server .
+docker build -t csgo-practice-server .
 ```
 
 _OR_
@@ -29,7 +32,7 @@ docker run \
 	-e "SERVER_PASSWORD=password" \
 	-e "RCON_PASSWORD=rconpassword" \
 	-e "STEAM_ACCOUNT=gamelogintoken" \
-	csgo-server
+	csgo-practice-server
 ```
 
 _OR_
