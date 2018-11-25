@@ -36,6 +36,7 @@ docker run \
 	-e "SERVER_PASSWORD=password" \
 	-e "RCON_PASSWORD=rconpassword" \
 	-e "STEAM_ACCOUNT=gamelogintoken" \
+	-e "ADMIN_ACCOUNT=steamid" \
 	csgo-practice-server
 ```
 
