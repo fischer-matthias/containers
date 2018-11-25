@@ -21,6 +21,7 @@ then
     export SERVER_PASSWORD="${SERVER_PASSWORD:-$(get_metadata SERVER_PASSWORD)}"
     export RCON_PASSWORD="${RCON_PASSWORD:-$(get_metadata RCON_PASSWORD)}"
     export STEAM_ACCOUNT="${STEAM_ACCOUNT:-$(get_metadata STEAM_ACCOUNT)}"
+    export ADMIN_ACCOUNT="${ADMIN_ACCOUNT:-$(get_metadata ADMIN_ACCOUNT)}"
     export CSGO_DIR="${CSGO_DIR:-$(get_metadata CSGO_DIR)}"
     export IP="${IP:-$(get_metadata IP)}"
     export PORT="${PORT:-$(get_metadata PORT)}"
@@ -35,6 +36,7 @@ else
     export SERVER_PASSWORD="${SERVER_PASSWORD:-changeme}"
     export RCON_PASSWORD="${RCON_PASSWORD:-changeme}"
     export STEAM_ACCOUNT="${STEAM_ACCOUNT:-changeme}"
+    export ADMIN_ACCOUNT="${ADMIN_ACCOUNT:-changeme}"
     export CSGO_DIR="${CSGO_DIR:-/csgo}"
     export IP="${IP:-0.0.0.0}"
     export PORT="${PORT:-27015}"
@@ -58,6 +60,14 @@ sv_password "$SERVER_PASSWORD"
 sv_lan 1
 sv_cheats 0
 SERVERCFG
+
+### Create admin accoun config
+cat << ADMINACCOUNT > $CSGO_DIR/csgo/addons/sourcemod/configs/admins_simple.ini
+Overrides
+{
+    "$ADMIN_ACCOUNT"		"g"	
+}
+ADMINACCOUNT
 
 ./srcds_run \
     -console \
