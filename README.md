@@ -1,5 +1,9 @@
-## CSGO practice server
-forked from https://github.com/kaimallea/csgo and added https://github.com/splewis/csgo-practice-mode.
+## CSGO-Practice-Server
+forked from [csgo docker image](https://github.com/kaimallea/csgo) and added [csgo practice mod](https://github.com/splewis/csgo-practice-mode).
+
+### Start practice mod
+Exec the `.setup` command as sourcemod [admin](https://github.com/splewis/csgo-practice-mode/wiki/Command-access#adding-admins-in-sourcemod) in the csgo ingame chat.
+
 
 # CSGO
 
