@@ -1,5 +1,5 @@
 "Plugin"
 {
-	"file"	"addons/metamod/bin/server"
+	"file"	"./metamod/bin/server"
 }
 
