@@ -5,3 +5,7 @@ MAINTAINER Matthias Fischer <m@tthias.space>
 RUN sudo npm install -g npm@^4
 RUN sudo npm install -g typescript
 RUN sudo npm install -g @ionic/cli
+
+RUN sudo mkdir /application
+
+WORKDIR /application
