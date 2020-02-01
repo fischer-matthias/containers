@@ -1,4 +1,4 @@
-FROM circleci/android:api-29-node
+FROM circleci/android:api-29-ndk
 
 MAINTAINER Matthias Fischer <m@tthias.space>
 
