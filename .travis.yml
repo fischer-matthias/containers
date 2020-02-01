@@ -1,0 +1,11 @@
+language: ruby
+
+services:
+  - docker
+
+install:
+  - docker build -t fischermatthias/capacitor-android .
+
+script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push fischermatthias/capacitor-android
