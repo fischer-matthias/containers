@@ -6,7 +6,6 @@ USER root
 
 RUN npm install -g npm@^4
 RUN npm install -g typescript
-RUN npm install -g @ionic/cli
 
 RUN mkdir /application
 
