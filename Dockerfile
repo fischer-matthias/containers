@@ -4,7 +4,7 @@ MAINTAINER Matthias Fischer <m@tthias.space>
 
 USER root
 
-RUN npm install -g npm@^4
+RUN apt-get install npm
 RUN npm install -g typescript
 
 RUN mkdir /application
