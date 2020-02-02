@@ -19,10 +19,11 @@ RUN npm install -g typescript
 # Check versions
 RUN node --version
 RUN npm --version
+RUN whoami
 
 # Prepare application directory
 RUN mkdir /home/circleci/application
-RUN chmod +w /home/circleci/application
+# RUN chmod +w /home/circleci/application
 
-WORKDIR /home/circleci/application
+WORKDIR /home/circleci
 ENTRYPOINT ["/home/circleci/application/build.sh"]
