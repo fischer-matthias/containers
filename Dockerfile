@@ -23,3 +23,4 @@ RUN npm --version
 RUN mkdir /home/circleci/application
 
 WORKDIR /home/circleci/application
+ENTRYPOINT ["/home/circleci/application/build.sh"]
