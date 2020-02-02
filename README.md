@@ -18,7 +18,7 @@ jobs:
   include:
     - stage: build
       script:
-        - docker run -it --rm -v "$PWD":/application fischermatthias/capacitor-android:latest $RUN_YOUR_BUILD_SCRIPT$
+        - docker run -it --rm -v "$PWD":/home/circleci/application fischermatthias/capacitor-android:latest $RUN_YOUR_BUILD_SCRIPT$
 ```
 
 ## credits
