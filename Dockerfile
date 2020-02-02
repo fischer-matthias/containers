@@ -23,7 +23,7 @@ RUN whoami
 
 # Prepare application directory
 RUN mkdir /home/circleci/application
-# RUN chmod +w /home/circleci/application
+RUN chmod +w /home/circleci/application
 
-WORKDIR /home/circleci
+WORKDIR /home/circleci/application
 ENTRYPOINT ["/home/circleci/application/build.sh"]
