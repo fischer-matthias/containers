@@ -21,7 +21,7 @@ RUN node --version
 RUN npm --version
 
 # Prepare application directory
-RUN mkdir ~/application
+RUN mkdir /home/circleci/application
 
-WORKDIR ~/application
+WORKDIR /home/circleci/application
 ENTRYPOINT ["/home/circleci/application/build.sh"]
