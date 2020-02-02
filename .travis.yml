@@ -4,8 +4,8 @@ services:
   - docker
 
 install:
-  - docker build -t fischermatthias/capacitor-android .
+  - docker build -t fischermatthias/capacitor-android:latest .
 
 script:
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
-  - docker push fischermatthias/capacitor-android
+  - docker push fischermatthias/capacitor-android:latest
