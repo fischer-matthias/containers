@@ -10,6 +10,9 @@ RUN apt-get install -y build-essential
 RUN apt-get upgrade nodejs
 RUN npm install -g typescript
 
+RUN node --version
+RUN npm --version
+
 RUN mkdir /application
 
 WORKDIR /application
