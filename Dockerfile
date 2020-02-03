@@ -23,7 +23,9 @@ RUN whoami
 
 # Prepare application directory
 RUN mkdir /home/circleci/application
-RUN chmod +w /home/circleci/application
-
 WORKDIR /home/circleci/application
+
+RUN sudo chown -R circleci:circleci /home/circleci/application
+RUN sudo chmod 755 /home/circleci/application
+
 ENTRYPOINT ["/home/circleci/application/build.sh"]
