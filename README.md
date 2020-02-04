@@ -2,28 +2,34 @@
 
 # capacitor-android
 
-simple docker image to build a ionic project with capacitor.
+simple docker image to build an ionic project with capacitor.
 
 ## how to
 
-`travis.yml`:
+`Dockerfile`:
 
 ```
-sudo: required
+FROM fischermatthias/capacitor-android:latest
 
+# project files into image
+COPY . .
+
+# execute the buildscript
+RUN ./build.sh
+```
+
+`.travis.yml`:
+
+```
 services:
   - docker
 
-jobs:
-  include:
-    - stage: build
-      script:
-        - docker run -it --rm -v "$PWD":/home/circleci/application fischermatthias/capacitor-android:latest
+install:
+  - docker build -t fischermatthias/application-name .
+
+script:
+  - docker run -it --rm fischermatthias/application-name
 ```
-
-## !!important!!
-
-Your project must include a `build.sh` file.
 
 ## credits
 
