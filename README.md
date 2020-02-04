@@ -15,7 +15,7 @@ FROM fischermatthias/capacitor-android:latest
 COPY . .
 
 # execute the buildscript
-RUN ./build.sh
+ENTRYPOINT["YOUR_BUILD_SCRIPT"]
 ```
 
 `.travis.yml`:
