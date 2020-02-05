@@ -12,10 +12,14 @@ simple docker image to build an ionic project with capacitor.
 FROM fischermatthias/capacitor-android:latest
 
 # project files into image
-COPY . .
+COPY . ./
 
-# execute the buildscript
-ENTRYPOINT["YOUR_BUILD_SCRIPT"]
+# make runscript executable and change ownership
+RUN sudo chmod +x ./build.sh
+RUN sudo chown circleci:circleci ./build.sh
+
+# run build script
+CMD ["./build.sh"]
 ```
 
 `.travis.yml`:
