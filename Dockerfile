@@ -9,7 +9,6 @@ RUN sudo apt-get install -y build-essential
 RUN sudo apt-get upgrade nodejs
 
 # Setup nodejs
-RUN echo $HOME
 RUN npm set prefix ~/.npm
 RUN PATH="$HOME/.npm/bin:$PATH"
 RUN PATH="./node_modules/.bin:$PATH"
@@ -23,11 +22,13 @@ RUN npm install -g @ionic/cli
 RUN node --version
 RUN npm --version
 
+# setting up some envoirement variables
 ENV NG_CLI_ANALYTICS false
+ENV GRADLE_USER_HOME /home/circleci/.gradle
 
 # Prepare application directory
 RUN mkdir /home/circleci/application
 WORKDIR /home/circleci/application
 
-RUN sudo chown -R circleci:circleci /home/circleci/application
+RUN sudo chown -R circleci:circleci /home/circleci
 RUN sudo chmod 755 /home/circleci/application
