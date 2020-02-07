@@ -14,12 +14,14 @@ RUN npm set prefix ~/.npm
 RUN PATH="$HOME/.npm/bin:$PATH"
 RUN PATH="./node_modules/.bin:$PATH"
 
+# Install global npm dependencies
 RUN npm install -g typescript
+RUN npm install -g @angular/cli
+RUN npm install -g @ionic/cli
 
 # Check versions
 RUN node --version
 RUN npm --version
-RUN whoami
 
 ENV NG_CLI_ANALYTICS false
 
