@@ -21,6 +21,8 @@ RUN node --version
 RUN npm --version
 RUN whoami
 
+ENV NG_CLI_ANALYTICS false
+
 # Prepare application directory
 RUN mkdir /home/circleci/application
 WORKDIR /home/circleci/application
