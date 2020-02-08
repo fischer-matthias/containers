@@ -31,4 +31,4 @@ RUN mkdir /home/circleci/application
 WORKDIR /home/circleci/application
 
 RUN sudo chown -R circleci:circleci /home/circleci
-RUN sudo chmod 755 /home/circleci/application
+RUN sudo chmod -R 755 /home/circleci
