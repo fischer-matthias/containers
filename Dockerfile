@@ -23,6 +23,7 @@ RUN node --version
 RUN npm --version
 
 # setting up some envoirement variables
+ENV TERM dumb
 ENV NG_CLI_ANALYTICS false
 ENV GRADLE_USER_HOME /home/circleci/.gradle
 
