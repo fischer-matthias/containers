@@ -29,6 +29,7 @@ ENV GRADLE_USER_HOME /home/circleci/.gradle
 
 # Prepare application directory
 RUN mkdir /home/circleci/application
+RUN mkdir /home/circleci/dist
 WORKDIR /home/circleci/application
 
 RUN sudo chown -R circleci:circleci /home/circleci
