@@ -14,5 +14,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Docker Login
+      uses: Azure/docker-login@v1
+      with:
+        username: fischer-matthias
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
     - name: Build capacitor-android
       run: docker build . --file build/capacitor-android/Dockerfile --tag fischer-matthias/capacitor-android:$(date +%s)
+
+    - name: Build csgo-practice-server
+      run: docker build . --file server/csgo-practice-server/Dockerfile --tag fischer-matthias/csgo-practice-server:$(date +%s)
