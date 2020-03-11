@@ -5,4 +5,4 @@ my docker collection
 - [capacitor-android](./build/capacitor-android/README.md)
 
 ## server applications
-- [csgo-practise-server](./server/csgo-practise-server/README.md)
+- [csgo-practice-server](./server/csgo-practice-server/README.md)
