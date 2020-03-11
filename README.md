@@ -1,8 +1,6 @@
-# container
+![Docker Image CI](https://github.com/fischer-matthias/containers/workflows/Docker%20Image%20CI/badge.svg)
+# containers
 my docker collection
 
-## build images
 - [capacitor-android](./build/capacitor-android/README.md)
-
-## server applications
 - [csgo-practice-server](./server/csgo-practice-server/README.md)
