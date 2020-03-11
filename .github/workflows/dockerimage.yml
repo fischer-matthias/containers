@@ -19,6 +19,7 @@ jobs:
 
     - name: Build capacitor-android
       run: docker build . --file build/capacitor-android/Dockerfile --tag fischer-matthias/capacitor-android:$(date +%s)
+           docker push fischer-matthias/capacitor-android:$(date +%s)
 
-    - name: Build csgo-practice-server
-      run: docker build . --file server/csgo-practice-server/Dockerfile --tag fischer-matthias/csgo-practice-server:$(date +%s)
+    #- name: Build csgo-practice-server # csgo-server to big for .github-ci
+    #  run: docker build . --file server/csgo-practice-server/Dockerfile --tag fischer-matthias/csgo-practice-server:$(date +%s)
