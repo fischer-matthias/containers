@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.com/fischer-matthias/capacitor-android.svg?branch=master)](https://travis-ci.com/fischer-matthias/capacitor-android)
-
 # capacitor-android
 
 simple docker image to build an ionic project with capacitor.
